@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=El+Messiri|Kaushan+Script|Niconne|Open+Sans:800|Oregano|Philosopher|Teko|Quicksand&display=swap');
+
+:root{
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: rgb(63, 20, 220);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+
+
+/* header styling */
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    margin: 0;
+    padding: 0;
+    background: var(--clr-bg);
+
+    box-shadow: inset 0 0 8em 0 rgb(4, 34, 54);
+}
+
+.site-title-container{
+    padding: 2px 0 5px;
+    border-top: lightskyblue 2px solid;
+    border-bottom: lightskyblue 0.5px solid;
+    box-shadow: inset 0 0 3em 0 rgb(4, 34, 54),
+    0 0 1.5em 0 lightskyblue;
+}
+
+#header h1 a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+    font-weight: 600;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    font-size: 2.5rem;
+    font-family: 'Oregano', cursive;
+    padding: 0;
+    text-shadow: 0 0 5px #3700ff, 0 0.125em 10px #6868f7;
+}
+
+.site-title{
+    border-bottom: lightskyblue 1px solid;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: inset 0 0 0.5em 0 lightskyblue,
+    0 0 0.5em 0 lightskyblue;
+}
+
+.siteTypeText {
+    border-bottom: lightskyblue 1px solid;
+    color: rgba(255, 255, 255, 0.719);
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1rem;
+    position: relative;
+    text-align: center;
+    
+    text-shadow: 0 0 5px #3700ff, 0 0.125em 10px #6868f7;
+    box-shadow: 0 0 0.5em 0 lightskyblue;
+}
+
+
+
+
+
+
+/* side profile styling */
+#side-profile{
+    border-left: lightskyblue 3px solid;
+    border-right: lightskyblue 3px solid;
+    position: fixed;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    transition: all ease-in-out 0.5s;
+    z-index: 9996;
+    transition: all 0.5s;
+    margin: 0;
+    padding: 0;
+    background: var(--clr-bg);
+
+    box-shadow: inset 0 0 8em 0 rgb(4, 34, 54);
+}
+
+#side-profile .profile img{
+    margin: 10px auto;
+    display: block;
+    width: 120px;
+    border: 1.5px solid #000000;
+    border-radius: 120px;
+
+    box-shadow: inset 0 0 3em 0 rgb(4, 34, 54),
+    0 0 1.5em 0 lightskyblue;
+}
+
+#side-profile .profile{
+    padding: 5px 0;
+    box-shadow: inset 0 0 3em 0 rgb(4, 34, 54);
+    border-bottom: lightskyblue 1px solid;
+}
+
+.nav-menu{
+    padding: 15px 0;
+    box-shadow: inset 0 0 3em 0 rgb(4, 34, 54),
+    0 0 0.5em 0 lightskyblue;
+}
+
+ul{
+    text-align: center;
+    padding-inline-start: 0;
+}
+
+.nav-menu li {
+    list-style: none;
+    margin: 15px auto;
+}
+
+.header-base{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1em;
+    bottom: 0;
+    padding: 17px 23px;
+    color: #fff;
+    text-align: center;
+    border-top: lightskyblue 1px solid;
+    box-shadow: inset 0 0 3em 0 rgb(4, 34, 54);
+}
+
+.header-base span a{
+    color: rgb(0, 195, 255);
+    text-decoration: none;
+    text-shadow:  0 0 0 #ffffff, 0 0 0 #8abbfc, 0 0.125em 10px #6868f7;
+}
+
+.header-base span a:hover{
+    font-size: 1.05em;
+}
+
+
+
+
+
+
+/* page main body styling */
+body {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.pg-main-body{
+    margin-left: 20%;
+}
+
+
+
+/* ==================================================================================================================== */
+
+
+
+/* responsive media query start */
+@media (max-width: 1350px){
+    #side-profile{
+        top: 60px;
+        margin: 20px 0 0;
+        width: 25%;
+    }
+
+    #side-profile .profile img{
+        width: 110px;
+    }
+
+    .pg-main-body{
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 1175px){
+    #side-profile{
+        top: 60px;
+        margin: 20px 0 0;
+    }
+
+    .header-base{
+        font-size: .75em;
+    }
+
+    .services .serv-content .card{
+        margin: 20px;
+        width: 100%;
+    }
+}
+
+/* need hamburger menu here */
+@media (max-width: 870px){
+    .menu-btn{
+        display: inline-block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 9999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+
+    #side-profile{
+        position: fixed;
+        width: 50%;
+        left: -100%;
+        transition: all 0.3s ease;
+    }
+
+    #side-profile.active{
+        left: 0;
+    }
+
+    .header-base{
+        border-bottom: lightskyblue 1px solid;
+    }
+
+    .pg-main-body{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 440px){
+    #side-profile{
+        width: 100%;
+    }
+}

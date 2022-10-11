@@ -1,0 +1,220 @@
+:root{
+    --clr-nav-neon: hsl(200 100% 54%); /* was (300 100% 54%) */
+    --clr-nav-bg: hsl(1 0% 35%); /* was (323 21% 16%) */
+
+    --clr-exe-neon: hsl(286, 100%, 50%); /* was (300 100% 54%) */
+    --clr-exe-bg: hsl(323 21% 16%); /* was (323 21% 16%) */
+
+    --clr-greyed-neon: rgb(93, 121, 136); /* was (300 100% 54%) */
+    --clr-greyed-bg: rgb(52, 52, 52); /* was (323 21% 16%) */
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/* nav button stylining */
+
+.neon-nav-button{
+    font-size: 1.25rem;
+
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-nav-neon);
+    border: var(--clr-nav-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+
+    text-shadow: 0 0 0.125em
+    hsl(0 0% 100% / 0.3), 0 0 0.45em
+    var(--clr-nav-neon);
+
+    box-shadow: inset 0 0 0.5em 0 var(--clr-nav-neon),
+    0 0 0.5em 0 var(--clr-nav-neon);
+
+    position: relative;
+
+    transition: background-color 100ms linear;
+}
+
+.neon-nav-button::before{
+    pointer-events: none;
+    content: ' ';
+    position: absolute;
+    background: var(--clr-nav-neon);
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg)
+    scale(1, 0.35);
+
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.neon-nav-button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-nav-neon);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.neon-nav-button:hover,
+.neon-nav-button:focus{
+    background: var(--clr-nav-neon);
+    color: var(--clr-nav-bg);
+    text-shadow: none;
+}
+
+.neon-nav-button:hover::after, 
+.neon-exe-button:hover::after{
+    opacity: 1;
+}
+
+/* execute button stylining */
+
+.neon-exe-button{
+    font-size: 1.25rem;
+
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-exe-neon);
+    border: var(--clr-exe-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+
+    text-shadow: 0 0 0.125em
+    hsl(0 0% 100% / 0.3), 0 0 0.45em
+    var(--clr-neon);
+
+    box-shadow: inset 0 0 0.5em 0 var(--clr-exe-neon),
+    0 0 0.5em 0 var(--clr-exe-neon);
+
+    position: relative;
+
+    transition: background-color 100ms linear;
+}
+
+.neon-exe-button::before{
+    pointer-events: none;
+    content: ' ';
+    position: absolute;
+    background: var(--clr-exe-neon);
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg)
+    scale(1, 0.35);
+
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.neon-exe-button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-exe-neon);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.neon-exe-button:hover,
+.neon-exe-button:focus{
+    background: var(--clr-exe-neon);
+    color: var(--clr-exe-bg);
+    text-shadow: none;
+}
+
+/* muted~non-functional button stylining */
+
+.neon-greyed-button{
+    font-size: 1.25rem;
+
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-greyed-neon);
+    border: var(--clr-greyed-neon) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+
+    text-shadow: 0 0 0.125em
+    rgba(138, 137, 137, 0.3), 0 0 0.45em
+    var(--clr-greyed-neon);
+
+    box-shadow: inset 0 0 0.5em 0 var(--clr-greyed-neon),
+    0 0 0.5em 0 var(--clr-greyed-neon);
+
+    position: relative;
+
+    transition: background-color 100ms linear;
+}
+
+.neon-greyed-button::before{
+    pointer-events: none;
+    content: ' ';
+    position: absolute;
+    background: var(--clr-greyed-neon);
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg)
+    scale(1, 0.35);
+
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.neon-greyed-button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-greyed-neon);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.neon-greyed-button:hover,
+.neon-greyed-button:focus{
+    background: var(--clr-greyed-neon);
+    color: var(--clr-greyed-bg);
+    text-shadow: none;
+}
+
+.neon-greyed-button:hover::after, 
+.neon-greyed-button:hover::after{
+    opacity: 1;
+}
+
+/* ==================================================================================================================== */
+
+
+
+
+/* responsive media query start */
+@media (max-width: 1350px){
+    .neon-nav-button,
+    .neon-exe-button{
+        font-size: 1rem;
+    }
+}
